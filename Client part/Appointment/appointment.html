@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Fa rezervare!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../header_footer.css">
+    <link rel="stylesheet" type="text/css" href="appointment.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <img src="../../Images/logo-header.png" alt="BikeRepairLogo">
+            </div>
+
+            <div class="separate_contact">
+                +40 757 256 789 <br> BikeS@gmail.com
+            </div>
+
+            <div class="separate_contact">
+                Iasi, Sf. Lazar nr. 13
+            </div>
+
+            <div class="separate_contact">
+                Luni-Vineri <br> 09:00 - 18:00
+            </div>
+        </header>
+
+        <nav>
+            <div class="nav_element">
+                <a href="../Home/home.html">Acasa</a>
+            </div>
+
+            <div class="nav_element">
+                <a href="../Services/services.html">Servicii</a>
+            </div>
+
+            <div class="book_appointment">
+                <a href="../Appointment/appointment.html">Fa rezervare!</a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="appointment_form_wrapper">
+                <div class="appointment_form_header">
+                    <h2>Rezerva!</h2>
+                </div>
+
+                <div class="appointment_form_body">
+                    <form action="/register" method="POST">
+						<div id="calendar-container">
+							<div id="calendar-header">
+								<span id="calendar-month-year"></span>
+							</div>
+							<div id="calendar-dates">
+							</div>
+						</div>	
+                        <div>
+                            <label for="Data-select"></label>
+                            <select id="Data-select" required>
+                                <option value="" selected>--Data--</option>
+                                <option value="18.04">18.04</option>
+                                <option value="19.04">19.04</option>
+                                <option value="20.04">20.04</option>
+                                <option value="21.04">21.04</option>
+                                <option value="22.04">22.04</option>
+                                <option value="23.04">23.04</option>
+                                <option value="24.04">24.04</option>
+                                <option value="25.04">25.04</option>
+                                <option value="26.04">26.04</option>
+                                <option value="27.04">27.04</option>
+                                <option value="28.04">28.04</option>
+                                <option value="29.04">29.04</option>
+                                <option value="30.04">30.04</option>
+                            </select>
+                            <button type="submit" formaction="/calendar">
+                                Vezi orele disponibile!
+                            </button>
+                        </div>
+
+                        <div>
+                            <label for="Ora-select"></label>
+                            <select id="Ora-select" required>
+                                <option value="" selected>--Ora--</option>
+                                <option value="08:00">08:00</option>
+                                <option value="10.00">10.00</option>
+                                <option value="12.00">12.00</option>
+                                <option value="14.00">14.00</option>
+                            </select>
+                        </div>						
+                        <div>
+                            <label for="Nume"></label>
+                            <input type="text" id="Nume" name="Nume" placeholder="Nume" required><br />
+                        </div>
+
+                        <div>
+                            <label for="Email"></label>
+                            <input type="email" id="Email" name="Email" placeholder="Email" required><br />
+                        </div>
+
+                        <div>
+                            <label for="Telefon"></label>
+                            <input type="tel" id="Telefon" name="Telefon" placeholder="Telefon" required>
+                        </div>
+
+                        <div>
+                            <!-- <p>Scrie o descriere!</p> -->
+                            <label for="Mesaj"></label>
+                            <input name="Mesaj" id="Mesaj" placeholder="Descriere" required>
+                            
+                        </div>
+
+                        <div id="upload_files">
+                            <!-- <p>Incarca o poza sau un video!</p> -->
+                            <label for="Upload_files"></label>
+                            <input type="file" accept="video/*, image/*" id="Upload_files" name="Upload_files">
+                        </div>
+                        
+                        <button type="submit" formaction="/login">
+                            Programeaza!
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="logo">
+            <img src="../../Images/logo-footer.png" alt="BikeRepairLogo">
+        </div>
+
+        <div class="separate_contact">
+            +40 757 256 789 <br> BikeS@gmail.com
+        </div>
+
+        <div class="separate_contact">
+            Iasi, Sf. Lazar nr. 13
+        </div>
+
+        <div class="separate_contact">
+            Luni-Vineri <br> 09:00 - 18:00
+        </div>
+    </footer>
+</body>
+
+</html>

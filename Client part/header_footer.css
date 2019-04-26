@@ -1,0 +1,120 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+    box-sizing: border-box;
+}
+body {
+    box-sizing: border-box;
+    min-height: 100vh; 
+    position: relative;
+    background-color: grey;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    flex-wrap: wrap;
+
+}
+
+nav {
+    background-color: #333333;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+}
+
+.nav_element {
+    width: 120px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav_element a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav_element a:hover {
+    width: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ff5938;
+    height: 50px;
+}
+
+.book_appointment {
+    width: 240px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ff5938;
+    height: 50px;
+    flex-wrap: nowrap;
+}
+
+.book_appointment a {
+    color: #ffffff; 
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+.book_appointment a:hover {
+    width: 240px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fa3b14;
+    height: 50px;
+}
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #333333;
+    color: #ffffff;
+    flex-wrap: wrap;
+    /*position: absolute;*/ 
+    /*bottom: 0px;*/ 
+    /*width: 100%;*/
+}
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+.wrapper > * {
+  flex: 1 100%;
+}
+/* Medium screens */
+@media all and (min-width: 600px) {
+  /* We tell both sidebars to share a row */
+  .main { flex: 1 auto; }
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+  /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars 
+   */
+
+}
+  .main { flex: 5 0px; }
+  .header { order: 1; }
+  .main    { order: 3; }
+  .nav { order: 2; }
+  .footer  { order: 4; }

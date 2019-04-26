@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stocks.css">
+    <title>BikeS - Stocks</title>
+</head>
+
+<body>
+    <nav>
+        <img src="../../Images/logo-header.png" alt="Bike service logo" class="logo_image">
+        <ul>
+            <li>
+                <a href="../Appointments/appointments.html">
+                    Programari
+                </a>
+            </li>
+
+            <li>
+                <a href="../Stocks/stocks.html">
+                    Stocuri
+                </a>
+            </li>
+
+            <li>
+                <a href="../Orders/orders.html">
+                    Comenzi
+                </a>
+            </li>
+
+            <li>
+                <label for="import_stocks" title="Only .csv and .json file types"> Import stocuri </label>
+                <input type="file" accept=".csv, .json" id="import_stocks" name="import_stocks">
+            </li>
+
+            <li>
+                <label title="Only .csv, .json and .pdf file types">Export stocuri</label>
+            </li>
+
+            <li>
+                <a href="../Login/login.html">
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="stocks_container">
+        <div class="stock">
+            <p>Id produs: 1332</p>
+            <p>Denumire: Frane</p>
+            <p>Cantitate (buc): 20</p>
+            <div>
+                <form action="/action_page.php">
+                    <label for="adauga_1">Adauga: </label>
+                    <input type="number" id="adauga_1" min="1" name="adauga" placeholder="Cantitate (buc)" required>
+                    <button type="submit">Adauga!</button>
+                </form>
+
+                <form action="/action_page.php">
+                    <label for="elimina_1">Elimina: </label>
+                    <input type="number" id="elimina_1" min="1" name="elimina" placeholder="Cantitate (buc)" required>
+                    <button type="submit">Elimina!</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="stock">
+            <p>Id produs: 1332</p>
+            <p>Denumire: Frane</p>
+            <p>Cantitate (buc): 20</p>
+            <div>
+                <form action="/action_page.php">
+                    <label for="adauga_2">Adauga: </label>
+                    <input type="number" id="adauga_2" min="1" name="adauga" placeholder="Cantitate (buc)" required>
+                    <button type="submit">Adauga!</button>
+                </form>
+
+                <form action="/action_page.php">
+                    <label for="elimina_2">Elimina: </label>
+                    <input type="number" id="elimina_2" min="1" name="elimina" placeholder="Cantitate (buc)" required>
+                    <button type="submit">Elimina!</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

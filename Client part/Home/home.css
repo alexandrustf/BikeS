@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.home_photo {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../Images/home_photo.jpg");
+}
+
+.main_message {
+    height: 20%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* @media screen and (max-width: 500px) {
+    .home_photo {
+        width: 
+    }
+} */
