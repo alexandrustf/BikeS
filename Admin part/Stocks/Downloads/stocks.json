@@ -1,0 +1,128 @@
+[
+    {
+        "id": "1",
+        "nume": "angrenaj",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "2",
+        "nume": "anvelopa",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "3",
+        "nume": "baieu",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "4",
+        "nume": "cadru",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "5",
+        "nume": "camera",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "6",
+        "nume": "cuvete",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "7",
+        "nume": "disc-frana",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "8",
+        "nume": "etrier",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "9",
+        "nume": "furca",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "10",
+        "nume": "ghidon",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "11",
+        "nume": "janta",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "12",
+        "nume": "lant",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "13",
+        "nume": "pedala",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "14",
+        "nume": "pinion",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "15",
+        "nume": "placuta-frana",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "16",
+        "nume": "sa",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "17",
+        "nume": "schimbator",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    },
+    {
+        "id": "18",
+        "nume": "spita",
+        "cantitate": "20",
+        "created_at": "2019\/05\/1405:23:28pm",
+        "updated_at": "2019\/05\/1405:23:28pm"
+    }
+]

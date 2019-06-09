@@ -32,7 +32,7 @@ li input {
     display: none;
 }
 
-li label, a, .download-button {
+li label, li button, a {
     text-decoration: none;
     display: block;
     line-height: 3;
@@ -43,12 +43,12 @@ li label, a, .download-button {
     /* font-size: 1.3vw; */
 }
 
-.download-button {
+li button {
     width: 100%;
     border: 0;
 }
 
-li label:hover, a:hover, .download-button:hover {
+li label:hover, li button:hover, a:hover {
     color: rgb(255, 255, 255);
     background-color: #fa3b14;
     cursor: pointer;
