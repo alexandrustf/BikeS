@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>BikeS - Project report</title>
+  <link rel="stylesheet" href="scholarly.css" />
+  <style>
+    pre
+    {
+      font-family: Courier, 'New Courier', monospace;
+      line-height: 1.2;
+      font-size: 12px;
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap;
+      white-space: -o-pre-wrap;
+      word-wrap: break-word;
+    }
+
+  </style>
+</head>
+<body>
+<article itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <header>
+    <h1 itemprop="name">BikeS - Project report</h1>
+  </header>
+  <h2 role="doc-subtitle">Github authors</h2>
+  <section itemprop="articleSection">
+    <ol>
+      <li itemscope itemtype="http://schema.org/Person">
+        <a href="  http://github.com/alexandrustf" itemprop="url">
+          <span itemprop="givenName">Alexandru </span>
+          <span itemprop="additionalName">Ioan</span>
+          <span property="familyName">Stefan</span>
+        </a>
+      </li>
+      <li itemscope itemtype="http://schema.org/Person">
+        <a href="http://github.com/FelixHugeanu" itemprop="url">
+          <span itemprop="givenName">Felix</span>
+          <span itemprop="schema:familyName">Hugeanu</span>
+        </a>
+      </li>
+
+    </ol>
+    <ol>
+      <li id="scienceai" itemscope itemtype="https://schema.org/EducationalOrganization">
+        <a href="http://www.info.uaic.ro" itemprop="url">
+          <span itemprop="name"> Facultatea de Informatica Iasi </span>
+        </a>
+      </li>
+    </ol>
+  </section>
+
+  <section itemprop="articleSection">
+    <h2 role="doc-subtitle" >Project description</h2>
+    <p itemprop="about">This project aims to be an online system and inventory management system for a Bike repairing service. It has the purpose of automating the appointments system, 
+      orders to providers and the management of stocks. Also, it offers a pretty interface to client in order to see prices and make an appointment to repair his bike.</p>
+  </section>
+
+  </section>
+  <h2 role="doc-subtitle">Architecture</h2>
+  <section  itemprop="articleSection">
+    <img src="Diagrama.jpg" alt="architecture"><br><br>
+    <p>Diagram: The architecture</p><br><br>
+    <p itemprop="doc-subtitle">- customer will consult the days and hours of the service, fill in the form with the desired time and date, name, mail, image / video and description. The scheduling will be retrieved and stored in the database (in the Schedules table) (the date and time available will also be retrieved from the database)<br>
+      -Administrator can see schedules on the programming page (these are displayed from the database)<br>
+      -Administrator can keep stock records on the stock page, he can add / remove products from the database (stock table)<br>
+      -Administrator can keep records of commands in the commands page, he can give new orders for the products necessary for the service</p>
+    <h3 role="doc-subtitle">Storage of data</h3>
+    <p>We used a MySQL Database in order to persist the appointments made by clients, stocks of every item and orders made to providers. Also, a table in our
+      database for persisting the admins(email, password, and JWT). </p>
+	<img src="EntityRelationshipDiagram.png" alt="EntityRelationshipDiagram"><br><br>
+  </section>
+  <section itemprop="articleSection">
+    <h4 role="doc-subtitle">REST Api</h4>
+    <p role="contentinfo">
+        The service will expose a REST API. The REST API is be able to respond to GET, PUT, POST requests (eg GET appointments / or GET appointments / {id}).
+        <br>
+             GET appointments/ 
+        Protocol: GET
+        URI: /appointments
+        Request body: EMPTY
+        <br>
+
+        Response:
+        [
+        {
+              "id": 1,
+          "Nume": "Gigel",
+          "Telefon": "0757 213 213",
+              "Email": "gigel@gmail.com",
+        "Data": "2008-01-14T04:00:00Z",
+        "Descriere": "dasdsadasdsadas",
+        "Imagine/Video":"imagine/video.url",
+              "created_at": "2008-01-14T04:33:35Z",
+              "updated_at": "2008-01-14T04:33:35Z"
+        },
+        {
+              "id": 2,
+          "Nume": "Gigel2",
+          "Telefon": "0757 213 212",
+              "Email": "gigel2@gmail.com",
+        "Data": "2008-01-14T04:00:00Z",
+        "Descriere": "dasdsadasdsadas",
+        "Imagine/Video":"imagine/video.url",
+              "created_at": "2008-01-14T04:33:35Z",
+              "updated_at": "2008-01-14T04:33:35Z"
+        }
+            ]
+            <br>
+
+        GET appointments/{id}
+        ex : GET appointments/1 
+        Protocol: GET
+        URI: /appointments/1
+        Request body: EMPTY
+        <br>
+
+        Response:
+        {
+              "id": 1,
+          "Nume": "Gigel",
+          "Telefon": "0757 213 213",
+              "Email": "gigel@gmail.com",
+        "Data": "2008-01-14T04:00:00Z",
+        "Descriere": "dasdsadasdsadas",
+        "Imagine/Video":"imagine/video.url",
+              "created_at": "2008-01-14T04:33:35Z",
+              "updated_at": "2008-01-14T04:33:35Z"
+        }
+        <br>
+
+        GET GET/stocks/{id}
+        ex :GET stocks/1 
+        Protocol: GET
+        URI: /stocks/1
+        Request body: EMPTY
+        Response:
+        {
+              "id": 1,
+            "produs":"frane",
+            "Cantitate ":"20",
+              "created_at": "2008-01-14T04:33:35Z",
+              "updated_at": "2008-01-14T04:33:35Z"
+        }
+        <br>
+
+        Similar to GET / stocks. We only show that we're returning all the stocks. Also, a similar response for GET orders / and GET orders / 1 requests.
+        <br>
+
+        2)POST - request pentru a adauga campuri noi
+        POST appointments
+        Protocol: POST
+        URI: /appointments
+        <br>
+
+        Request body:
+        {
+          "Nume": "Gigel",
+          "Telefon": "0757 213 213",
+          "Email": "gigel@gmail.com",
+          "Data": "2008-01-14T04:00:00Z",
+          "Descriere": "dasdsadasdsadas",
+          "Imagine/Video":"imagine/video.url"
+        }
+        <br>
+
+        Response with status 201:
+        {
+          meta: {
+          },
+          data: {
+            uri: /appointments/23
+          }
+        }
+        Description: Request for programming to be created. The server response is 201        
+        <br>
+
+        POST /stocks
+        Protocol: POST
+        URI: /stocks
+        Request body:
+        {
+            "produs":"jante",
+            "cantitate":"5"
+        }
+        <br>
+
+        Response with status 201:
+        {
+          meta: {
+          },
+          data: {
+            uri: /stocks/3
+          }
+        }
+        <br>
+
+        POST /orders
+        Protocol: POST
+        URI: /orders
+        Request body:
+        {
+            "produs":"jante",
+            "cantitate":"5"
+            "Data":"2008-01-14T04:00:00Z"
+        }
+        Response with status 201:
+        {
+          meta: {
+          },
+          data: {
+            uri: /orders/5
+          }
+        }
+        <br>
+
+        3) PUT - request to be modified existing fields
+        PUT orders
+        Protocol: PUT
+        URI: /orders/5
+        Request body:
+        {
+            "id":5,
+            "produs":"jante",
+            "Data":"2008-01-14T04:00:00Z"
+        }
+        <br>
+
+        Response with status 412:
+        {
+          meta: {
+            error: 789,
+            message: 'It must be inserted the "Cantitate" field'
+          },
+          data: {
+          }
+        }
+        Description: Requests the book to be modified or created. Server response is 412 (precondition failed) with error code and message describing the problem.
+
+    </p>
+	<img src="REST.png" alt="REST"><br><br>
+  </section>
+
+  <section itemprop="articleSection">
+    <h3 role="doc-subtitle">Ajax</h3>
+    <p role="contentinfo">On home page, we make a call to WIKIPEDIA API in order to get the latest Defitions of a bike. It is an asyncronous operation, in other words  
+      the page will be loaded and the response from wikipedia API will be loaded when it gets to our application.
+    </p>
+	 <img src="ajax.png" alt="about"><br><br>
+    <h3 role="doc-subtitle">Mail system</h3>
+    <p role="contentinfo">The administrator must accept or decline the appointment of a client. His response is communicated through an automated mail system.
+      We used a Gmail server in XAMPP in order to deliver the appropriate messages to the specified emails.
+    </p>
+	<img src="mailSystem.png" alt="mailSystem"><br><br>
+	<h4 role="doc-subtitle">Admin</h3>
+    <p role="contentinfo">
+      The admin page includes an admin panel, where he can choose what panel to look at: appointments(the default one), stocks, orders.
+      He can accept/decline requests from here and give estimated price in case of accepting the appointment or a reason in case of refusing it.
+      From the other 2 panels. He can manage his stocks and make orders to providers.
+    </p>
+	<img src="adminPanel.png" alt="adminPanel"><br><br>
+  </section>
+  <section itemprop="articleSection">
+      <h2 role="doc-subtitle" >Tehnologies used</h2>
+      <p itemprop="about">
+        For Frontend we used: HTML5, CSS3, Javascript.<br>
+        For Backend we used: PHP, Javascript.<br>
+        Server APACHE(from XAMPP) which runs the PHP files.<br>
+        Server for mail system: Gmail server.<br>
+        For storage data: MySQL server.
+
+      </p>
+    </section>
+    <section itemprop="articleSection">
+        <h2 role="doc-bibliography" >Bibliography</h2>
+        <p itemprop="about">
+            <a role="doc-bibliography" href="https://devdrive.io">https://devdrive.io</a><br>
+            <a role="doc-bibliography" href="https://www.php.net/docs.php">https://www.php.net/docs.php</a><br>
+            <a role="doc-bibliography" href="https://www.w3schools.com/">https://www.w3schools.com/</a><br>
+            <a role="doc-bibliography" href="https://www.restapitutorial.com/">https://www.restapitutorial.com/</a><br>
+            <a role="doc-bibliography" href="https://stackoverflow.com/">https://stackoverflow.com/</a><br>
+            <a role="doc-bibliography" href="https://css-tricks.com/">https://css-tricks.com/</a><br>
+
+          <br>
+        </p>
+      </section>
+</article>
+
+</body>
+</html>

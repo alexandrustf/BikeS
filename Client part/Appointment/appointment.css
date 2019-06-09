@@ -92,3 +92,10 @@ button{
 form{
     padding: 2em;
 }
+.ora-radio{
+    display: flex;
+}
+.radio{
+    width:40%;
+    margin-top: 3%;
+}

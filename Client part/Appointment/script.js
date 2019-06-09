@@ -20,7 +20,12 @@ window.onload = function(){
 function get_calendar(day_no, days){
     var table = document.createElement('table');
     var tr = document.createElement('tr');
-    
+    var daysAvailable = document.getElementsByTagName("option");
+    var daysAvailableValue = [];
+    for(var index = 0 ; index < daysAvailable.length ; index++) {
+        daysAvailableValue.push(daysAvailable[index].value);
+        console.log('Ziua cu nr: '+ daysAvailable[index].value);
+    }
     //row for the day letters
     for(var c=0; c<=6; c++){
         var td = document.createElement('td');
@@ -67,6 +72,15 @@ function get_calendar(day_no, days){
             td.innerHTML = count;
             if(c == 0 || c==6){
                 td.setAttribute('class', "busy");
+            }
+
+            for(var index = 0 ; index < daysAvailable.length ; index++) {
+                var d = new Date();
+                console.log('Luna valabila este : ' + parseInt(daysAvailableValue[index].substring(0, 2))+' luna este: '+d.getMonth() +1 );
+                console.log('Ziua valabila este : ' + parseInt(daysAvailableValue[index].substring(3, 5))+'iar ziua curenta este: '+count);
+                if(parseInt(daysAvailableValue[index].substring(3, 5)) === count && parseInt(daysAvailableValue[index].substring(0, 2)) === d.getMonth() +1 ){
+                    td.setAttribute('class', "available");            
+                }
             }
             count++;
             tr.appendChild(td);

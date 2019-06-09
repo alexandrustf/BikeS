@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../header_footer.css">
 	<link rel="stylesheet" type="text/css" href="home.css">
 	<link rel="stylesheet" type="text/css" href="responsive.css">
-
+	<script src="home.js"></script>
 </head>
 
 <body>
@@ -42,17 +42,15 @@
 		</div>
 
 		<div class="book_appointment">
-			<a href="../Appointment/appointment.html">Fa rezervare!</a>
+			<a href="../Appointment/appointment.view.php">Fa rezervare!</a>
 		</div>
 	</nav>
 
 	<main>
 		<div class="main_message">
-			Repara-ti bicicleta la noi!
-			<div class="book_appointment">
-				<a href="../Appointment/appointment.html">Fa rezervare!</a>
+			<div class="definitii">
+				<h1>Ce este bicicleta?</h1>
 			</div>
-		</div>
 	</main>
 
 	<footer>
@@ -72,7 +70,36 @@
 			Luni-Vineri <br> 09:00 - 18:00
 		</div>
 	</footer>
+	<script>
+			let body = document.querySelector('.definitii');
+			let btnEl = document.getElementById('refreshBtn');
+	 	 
+				fetch('https://ro.wikipedia.org/w/api.php?action=opensearch&origin=*&search=Bicycle&limit=7&format=json', {
+					method: 'GET'
+				})
+				.then(resp => resp.json())
+				.then(jsonResp => {
+					count = 0;
+					console.log(jsonResp[2]);
+					(jsonResp[2]).forEach(element => {
+						if(count !== 0){
+							console.log(element);
+							const p = document.createElement('p');
+							p.innerText = element;
 
+							body.appendChild(p);
+						}
+						count++;
+					});    
+
+	 
+					
+				})
+				.catch(err => {
+					alert(err);
+					
+				});
+		</script>
 </body>
 
 </html>
