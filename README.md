@@ -12,8 +12,4 @@ Detalii de implementare:
 -administratorul poate vedea programarile in pagina de programari (acestea sunt afisate din baza de date )
 -administratorul poate tine evidenta stocurilor din pagina stocuri, el poate adauga/ elimina produse din baza de date (tabela stocuri)
 -administratorul poate tine evidenta comenzilor in pagina comenzi, el poate da comenzi noi pentru produsele necesare service-ului
-- am adaugat o tabela noua, numita "preturi", care va avea stocat id, reparatie, piesele necesare reparatiei si pretul reparatiei (Ex. 1 - pana - cauciuc - 30 lei ) 
-- am adaugat o tabela noua, numita "reparatii", care va avea stocat id, id_programare, id_pret.
-- am adaugat o pagina noua "reparatii" care va afisa reparatiile si se vor putea modifica reparatiile( vor fi afisate , reparatiile necesare(pana, schimbat furca), pret( 80 lei), data cand fi facuta reparatia si butoane de adauga elimina) 
-- reparatiile vor fi generate pe baza descrierii clientului, administratorul va putea adauga si alte reparatii necesare daca este cazul.. sau elimina
-- atunci cand administratorul accepta o programare, automat se va creea o "reparatie" in baza de date
+- stoc minim pt fiecare produs, atunci cand un stoc este mai mic de 20, se va creea automat o comanda noua pentru acel produs
